@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PersonDemoPack">
+    <output-path>G:/</output-path>
+    <root id="archive" name="PersonDemoPack.jar">
+      <element id="module-output" name="LeetCodeWork" />
+    </root>
+  </artifact>
+</component>
