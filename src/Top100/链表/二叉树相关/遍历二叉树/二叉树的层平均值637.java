@@ -22,8 +22,8 @@ public class 二叉树的层平均值637 {
             for (int i=0;i<count;i++){
                 node=deque.pollFirst();
                 sum+= node.val;
-                if (node.left!=null) deque.addLast(node.left);
-                if (node.right!=null) deque.addLast(node.right);
+                if (root.left!=null) deque.addLast(root.left);
+                if (root.right!=null) deque.addLast(root.right);
             }
             res.add(sum/count);
         }

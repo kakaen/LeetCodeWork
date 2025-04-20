@@ -4,6 +4,11 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class 最长连续序列128 {
+    public int longestConsecutive2(int[] nums) {
+        //找出数字连续的的最长序列
+        int[] flags=new int[20];
+        return 20;
+    }
     public int longestConscutive(int[] nums){
         Set<Integer> set=new HashSet<>();
         int max=0;

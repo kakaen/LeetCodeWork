@@ -11,6 +11,17 @@ public class 杨辉三角118 {
             System.out.println(list);
         }
     }
+    public List<List<Integer>> generate2(int numRows){
+        //
+        int[][] dp=new int[2][2];
+        List<List<Integer>> res=new ArrayList<>();
+        for (int i=0;i<numRows;i++){
+            for (int j=0;j<=i;j++){
+
+            }
+        }
+        return null;
+    }
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> res=new ArrayList<>();
         //dp[i][j]=dp[i-1][j-1]+dp[i-1][j]

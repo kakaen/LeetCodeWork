@@ -1,6 +1,35 @@
 package Top100二刷.动态规划;
 
 public class 打家劫舍198 {
+    public int rob4(int[] nums){
+        int n=nums.length;
+        int first=nums[0];
+        int second=Math.max(nums[0],nums[1]);
+        for (int i=2;i<n;i++){
+            int temp=Math.max(first+nums[i],second);
+            first=second;
+            second=temp;
+        }
+        return second;
+    }
+    public int rob3(int[] nums){
+        int n=nums.length;
+        int[] dp=new int[n+1]; //dp[i]表示到第i个房间的最大值
+        //dp[i]=Math.max(dp[i-2]+nums[i],dp[i-1])
+        dp[0]=0; //前0间房子的价值为0；
+        //dp[i]=Math.max(dp[i-1],dp[i-2]+nums[i-1])
+        dp[1]=nums[0];
+        for (int i=2;i<=n;i++){
+            dp[i]=Math.max(dp[i-2]+nums[i-1],dp[i-1]);
+        }
+        return dp[n];
+    }
+
+    public static void main(String[] args) {
+        打家劫舍198 test = new 打家劫舍198();
+        System.out.println(test.rob3(new int[]{1, 2, 3, 1}));
+        System.out.println(test.rob3(new int[]{2, 7, 9, 3, 1}));
+    }
     public int rob(int[] nums){
         //dp[i]表示偷到第i个房间的最大金额
         int n=nums.length; //共有n个房间
@@ -29,9 +58,5 @@ public class 打家劫舍198 {
         return second;
     }
 
-    public static void main(String[] args) {
-        打家劫舍198 test = new 打家劫舍198();
-        System.out.println(test.rob2(new int[]{1, 2, 3, 1}));
-        System.out.println(test.rob2(new int[]{2, 7, 9, 3, 1}));
-    }
+
 }

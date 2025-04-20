@@ -2,7 +2,20 @@ package Top100二刷;
 
 import 代码随想录.链表.ListNode;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class 两数相加2 {
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer,Integer> map=new HashMap<>();
+        for (int i=0;i<nums.length;i++){
+            if (map.containsKey(target-nums[i])){
+                return new int[]{map.get(target-nums[i]),i};
+            }
+            map.put(nums[i],i);
+        }
+        return null;
+    }
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         //每位数字都是按照逆序的方式进行存储的，
         int flag=0; //判断是否进位

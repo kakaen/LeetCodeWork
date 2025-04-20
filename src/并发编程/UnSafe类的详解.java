@@ -1,5 +1,7 @@
 package 并发编程;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class UnSafe类的详解 {
